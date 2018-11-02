@@ -59,7 +59,7 @@ when(${变量}) {
 }
 ```
 
-具体语法参见[ANTLR文件](document/Formula.g4)
+具体语法参见[ANTLR文件](document/Formula.g4)或[单元测试](src/test/kotlin/cn/teleware/cp3/mathfrontier/impl/interpreter/FormulaExpInterpreterInterpretTests.kt)
 
 ## 线程安全
 
