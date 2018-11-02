@@ -59,7 +59,7 @@ when(${变量}) {
 }
 ```
 
-具体语法参见[ANTLR文件](doc_reference/Formula.g4)
+具体语法参见[ANTLR文件](document/Formula.g4)
 
 ## 线程安全
 
