@@ -31,19 +31,19 @@ public class FormulaParser extends Parser {
 		RULE_methodParameterPart = 13, RULE_methodParameterList = 14, RULE_methodParameter = 15, 
 		RULE_variableReference = 16, RULE_variableReferenceStart = 17, RULE_variableReferenceEnd = 18, 
 		RULE_variableIndex = 19, RULE_numeral = 20, RULE_range = 21, RULE_rangeParameter = 22, 
-		RULE_nullSymbol = 23;
+		RULE_infinitySymbol = 23;
 	public static final String[] ruleNames = {
 		"formula", "expression", "whenExpression", "whenBranches", "whenBranch", 
 		"whenCondition", "logicExpression", "leftOmittedLogicExpression", "elseBranch", 
 		"logicSymbol", "cmpSymbol", "methodInvocation", "methodName", "methodParameterPart", 
 		"methodParameterList", "methodParameter", "variableReference", "variableReferenceStart", 
 		"variableReferenceEnd", "variableIndex", "numeral", "range", "rangeParameter", 
-		"nullSymbol"
+		"infinitySymbol"
 	};
 
 	private static final String[] _LITERAL_NAMES = {
 		null, "'('", "')'", "'*'", "'/'", "'+'", "'-'", "'when'", "'{'", "';'", 
-		"'}'", "'=>'", "':'", "'else'", "','", "'${'", "'%'", "'null'"
+		"'}'", "'=>'", "':'", "'else'", "','", "'${'", "'%'", "'infinity'"
 	};
 	private static final String[] _SYMBOLIC_NAMES = {
 		null, null, null, null, null, null, null, null, null, null, null, null, 
@@ -1696,8 +1696,8 @@ public class FormulaParser extends Parser {
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class,0);
 		}
-		public NullSymbolContext nullSymbol() {
-			return getRuleContext(NullSymbolContext.class,0);
+		public InfinitySymbolContext infinitySymbol() {
+			return getRuleContext(InfinitySymbolContext.class,0);
 		}
 		public RangeParameterContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -1741,7 +1741,7 @@ public class FormulaParser extends Parser {
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(208);
-				nullSymbol();
+				infinitySymbol();
 				}
 				break;
 			default:
@@ -1759,29 +1759,29 @@ public class FormulaParser extends Parser {
 		return _localctx;
 	}
 
-	public static class NullSymbolContext extends ParserRuleContext {
-		public NullSymbolContext(ParserRuleContext parent, int invokingState) {
+	public static class InfinitySymbolContext extends ParserRuleContext {
+		public InfinitySymbolContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_nullSymbol; }
+		@Override public int getRuleIndex() { return RULE_infinitySymbol; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof FormulaListener ) ((FormulaListener)listener).enterNullSymbol(this);
+			if ( listener instanceof FormulaListener ) ((FormulaListener)listener).enterInfinitySymbol(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof FormulaListener ) ((FormulaListener)listener).exitNullSymbol(this);
+			if ( listener instanceof FormulaListener ) ((FormulaListener)listener).exitInfinitySymbol(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof FormulaVisitor ) return ((FormulaVisitor<? extends T>)visitor).visitNullSymbol(this);
+			if ( visitor instanceof FormulaVisitor ) return ((FormulaVisitor<? extends T>)visitor).visitInfinitySymbol(this);
 			else return visitor.visitChildren(this);
 		}
 	}
 
-	public final NullSymbolContext nullSymbol() throws RecognitionException {
-		NullSymbolContext _localctx = new NullSymbolContext(_ctx, getState());
-		enterRule(_localctx, 46, RULE_nullSymbol);
+	public final InfinitySymbolContext infinitySymbol() throws RecognitionException {
+		InfinitySymbolContext _localctx = new InfinitySymbolContext(_ctx, getState());
+		enterRule(_localctx, 46, RULE_infinitySymbol);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{

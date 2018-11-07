@@ -11,7 +11,6 @@ import cn.teleware.cp3.mathfrontier.impl.LogicExp
 import cn.teleware.cp3.mathfrontier.impl.exps.*
 import cn.teleware.cp3.mathfrontier.impl.exps.logic.*
 import java.util.*
-import kotlin.collections.ArrayList
 
 internal class FormulaExpInterpreter(private val methodCollection: FormulaMethodCollection) : FormulaExpInterpreterSupport() {
 
@@ -136,8 +135,8 @@ private class FormulaVisitorImpl(
     }
 
     override fun visitRangeParameter(ctx: FormulaParser.RangeParameterContext): ValueExp {
-        return if (ctx.nullSymbol() != null) {
-            NullExp
+        return if (ctx.infinitySymbol() != null) {
+            InfinityExp
         } else {
             visit(ctx.expression()) as ValueExp
         }

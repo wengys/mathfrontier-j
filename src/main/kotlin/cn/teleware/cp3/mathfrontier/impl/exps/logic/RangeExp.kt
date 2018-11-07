@@ -1,10 +1,9 @@
 package cn.teleware.cp3.mathfrontier.impl.exps.logic
 
-import cn.teleware.cp3.mathfrontier.impl.Exp
 import cn.teleware.cp3.mathfrontier.impl.LogicExp
 import cn.teleware.cp3.mathfrontier.impl.ValueExp
 import cn.teleware.cp3.mathfrontier.impl.executor.ExpExecuteContext
-import cn.teleware.cp3.mathfrontier.impl.exps.NullExp
+import cn.teleware.cp3.mathfrontier.impl.exps.InfinityExp
 
 internal class RangeExp(
         private val value: ValueExp,
@@ -15,13 +14,13 @@ internal class RangeExp(
 ) : LogicExp {
     override fun accept(context: ExpExecuteContext): Boolean {
         val v = value.evaluate(context)
-        if(left !is NullExp) {
+        if(left !is InfinityExp) {
             val leftValue = left.evaluate(context)
             if((leftOpen && v <= leftValue) || (!leftOpen && v < leftValue )) {
                 return false
             }
         }
-        if(right !is NullExp) {
+        if(right !is InfinityExp) {
             val rightValue = right.evaluate(context)
             if((rightOpen && rightValue <= v) || (!rightOpen && rightValue < v )) {
                 return false

@@ -96,12 +96,12 @@ class FormulaExpInterpreterInterpretTests(
                     arrayOf<Any>("Cls.Call2(Cls.SubCall(1), 2)", "Cls.Call2(Cls.SubCall(1.0), 2.0)"),
                     //
                     arrayOf<Any>(
-                            "when(1){:`[1,2)`=>3;:`(4,null]`=>6;else=>0}",
-                            "when { 1.0 in [ 1.0, 2.0 ) => 3.0; 1.0 in ( 4.0, null ] => 6.0; else => 0.0 }"
+                            "when(1){:`[1,2)`=>3;:`(4,infinity]`=>6;else=>0}",
+                            "when { 1.0 in [ 1.0, 2.0 ) => 3.0; 1.0 in ( 4.0, infinity ] => 6.0; else => 0.0 }"
                     ),
                     arrayOf<Any>(
-                            "when(\${参数1}){:`[1,\${参数2})`=>3;:`(4,null]`=>\${参数3};else=>\${参数4}}",
-                            "when { \${参数1} in [ 1.0, \${参数2} ) => 3.0; \${参数1} in ( 4.0, null ] => \${参数3}; else => \${参数4} }"
+                            "when(\${参数1}){:`[1,\${参数2})`=>3;:`(4,infinity]`=>\${参数3};else=>\${参数4}}",
+                            "when { \${参数1} in [ 1.0, \${参数2} ) => 3.0; \${参数1} in ( 4.0, infinity ] => \${参数3}; else => \${参数4} }"
                     ),
                     //
                     arrayOf<Any>(
@@ -130,8 +130,8 @@ class FormulaExpInterpreterInterpretTests(
                     ),
                     //
                     arrayOf<Any>(
-                            "1+when(1){:`[1,2)`=>3;:`(4,null]`=>6;else=>0}-1",
-                            "((1.0 + when { 1.0 in [ 1.0, 2.0 ) => 3.0; 1.0 in ( 4.0, null ] => 6.0; else => 0.0 }) - 1.0)"
+                            "1+when(1){:`[1,2)`=>3;:`(4,infinity]`=>6;else=>0}-1",
+                            "((1.0 + when { 1.0 in [ 1.0, 2.0 ) => 3.0; 1.0 in ( 4.0, infinity ] => 6.0; else => 0.0 }) - 1.0)"
                     )
             )
         }

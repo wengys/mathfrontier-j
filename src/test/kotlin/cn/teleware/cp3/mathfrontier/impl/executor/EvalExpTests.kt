@@ -71,7 +71,7 @@ internal class EvalExpTests(
                             WhenExpressionExp(
                                     listOf(
                                             WhenBranchExp(RangeExp(NumeralExp(1.0),false, NumeralExp(1.0), NumeralExp(2.0), true), NumeralExp(3.0)),
-                                            WhenBranchExp(RangeExp(NumeralExp(1.0),true, NumeralExp(4.0), NullExp, false), NumeralExp(6.0))
+                                            WhenBranchExp(RangeExp(NumeralExp(1.0),true, NumeralExp(4.0), InfinityExp, false), NumeralExp(6.0))
                                     ),
                                     ElseBranchExp(NumeralExp(0.0))
                             ),

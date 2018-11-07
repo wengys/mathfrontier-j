@@ -159,7 +159,7 @@ internal class RangeExpTests(
                             RangeExp(
                                     NumeralExp(Double.MIN_VALUE),
                                     false,
-                                    NullExp,
+                                    InfinityExp,
                                     NumeralExp(2.0),
                                     false
                             ),
@@ -169,7 +169,7 @@ internal class RangeExpTests(
                             RangeExp(
                                     NumeralExp(Double.MIN_VALUE),
                                     true,
-                                    NullExp,
+                                    InfinityExp,
                                     NumeralExp(2.0),
                                     false
                             ),
@@ -180,7 +180,7 @@ internal class RangeExpTests(
                                     NumeralExp(Double.MAX_VALUE),
                                     false,
                                     NumeralExp(1.0),
-                                    NullExp,
+                                    InfinityExp,
                                     false
                             ),
                             true
@@ -190,7 +190,7 @@ internal class RangeExpTests(
                                     NumeralExp(Double.MAX_VALUE),
                                     false,
                                     NumeralExp(1.0),
-                                    NullExp,
+                                    InfinityExp,
                                     true
                             ),
                             true
@@ -199,8 +199,8 @@ internal class RangeExpTests(
                             RangeExp(
                                     NumeralExp(1.0),
                                     false,
-                                    NullExp,
-                                    NullExp,
+                                    InfinityExp,
+                                    InfinityExp,
                                     false
                             ),
                             true

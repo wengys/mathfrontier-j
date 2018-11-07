@@ -390,13 +390,13 @@ public class FormulaBaseListener implements FormulaListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterNullSymbol(FormulaParser.NullSymbolContext ctx) { }
+	@Override public void enterInfinitySymbol(FormulaParser.InfinitySymbolContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitNullSymbol(FormulaParser.NullSymbolContext ctx) { }
+	@Override public void exitInfinitySymbol(FormulaParser.InfinitySymbolContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

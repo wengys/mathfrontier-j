@@ -38,9 +38,9 @@ class FormulaExpVariableExtractorTests(
                     arrayOf("Cls.Call(1)", emptyList<String>()),
                     arrayOf("Cls.Call(\${参数})", listOf("参数")),
                     //
-                    arrayOf("when(1){:`[1,2)`=>3;:`(4,null]`=>6;else=>0}", emptyList<String>()),
+                    arrayOf("when(1){:`[1,2)`=>3;:`(4,infinity]`=>6;else=>0}", emptyList<String>()),
                     arrayOf(
-                            "when(\${参数1}){:`[1,\${参数2})`=>3;:`(4,null]`=>\${参数3};else=>\${参数4}}",
+                            "when(\${参数1}){:`[1,\${参数2})`=>3;:`(4,infinity]`=>\${参数3};else=>\${参数4}}",
                             listOf("参数1","参数2","参数3","参数4")
                     )
             )

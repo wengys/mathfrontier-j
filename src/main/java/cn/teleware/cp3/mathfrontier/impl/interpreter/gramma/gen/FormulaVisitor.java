@@ -208,9 +208,9 @@ public interface FormulaVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitRangeParameter(FormulaParser.RangeParameterContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link FormulaParser#nullSymbol}.
+	 * Visit a parse tree produced by {@link FormulaParser#infinitySymbol}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitNullSymbol(FormulaParser.NullSymbolContext ctx);
+	T visitInfinitySymbol(FormulaParser.InfinitySymbolContext ctx);
 }

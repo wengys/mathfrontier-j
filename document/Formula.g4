@@ -110,11 +110,11 @@ package cn.teleware.cp3.mathfrontier.impl.interpreter.gramma.gen;
 
     rangeParameter
         :   expression
-        |   nullSymbol
+        |   infinitySymbol
         ;
 
-    nullSymbol
-        :   'null'
+    infinitySymbol
+        :   'infinity'
         ;
 
     LogicSymbol

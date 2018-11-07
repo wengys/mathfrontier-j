@@ -338,13 +338,13 @@ public interface FormulaListener extends ParseTreeListener {
 	 */
 	void exitRangeParameter(FormulaParser.RangeParameterContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link FormulaParser#nullSymbol}.
+	 * Enter a parse tree produced by {@link FormulaParser#infinitySymbol}.
 	 * @param ctx the parse tree
 	 */
-	void enterNullSymbol(FormulaParser.NullSymbolContext ctx);
+	void enterInfinitySymbol(FormulaParser.InfinitySymbolContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link FormulaParser#nullSymbol}.
+	 * Exit a parse tree produced by {@link FormulaParser#infinitySymbol}.
 	 * @param ctx the parse tree
 	 */
-	void exitNullSymbol(FormulaParser.NullSymbolContext ctx);
+	void exitInfinitySymbol(FormulaParser.InfinitySymbolContext ctx);
 }
