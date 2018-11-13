@@ -6,7 +6,7 @@ import cn.teleware.cp3.mathfrontier.impl.executor.ExpExecutor
 import cn.teleware.cp3.mathfrontier.impl.interpreter.FormulaExpInterpreter
 import cn.teleware.cp3.mathfrontier.impl.interpreter.FormulaExpVariableExtractor
 
-class FormulaEvaluatorImpl(
+internal class FormulaEvaluatorImpl(
         formulaMethods: List<FormulaMethod>,
         variableCoercionStrategy: VariableCoercionStrategy,
         private val formulaCache: FormulaExpressionCache? = null

@@ -25,7 +25,7 @@ internal class EvalExpTests(
 
     @Test
     fun test() {
-        val evaluator = ExpExecutor(NullNotAllowedStrategy())
+        val evaluator = ExpExecutor(NullNotAllowedStrategy)
         val result = evaluator.execute(formula, valueExp, variableProvider())
         assertEquals(expected, result.resultValue)
         assertEquals(variableSize, result.variables.size)

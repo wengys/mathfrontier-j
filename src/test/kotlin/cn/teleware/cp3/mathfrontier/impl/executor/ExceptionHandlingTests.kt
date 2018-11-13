@@ -13,7 +13,7 @@ import kotlin.test.assertFailsWith
 class ExceptionHandlingTests {
     @Test
     fun notExistingVariableTest() {
-        val evaluator = ExpExecutor(NullNotAllowedStrategy())
+        val evaluator = ExpExecutor(NullNotAllowedStrategy)
         val formula = "\${a} + \${b} + 3"
         val exp = PlusExp(
                 PlusExp(
@@ -29,21 +29,21 @@ class ExceptionHandlingTests {
 
     @Test
     fun oneDivByZeroTest() {
-        val evaluator = ExpExecutor(NullNotAllowedStrategy())
+        val evaluator = ExpExecutor(NullNotAllowedStrategy)
         val formula = "1.0/0.0"
         val exp = DivExp(
                 NumeralExp(1.0),
                 NumeralExp(0.0)
         )
 
-        assertFailsWith(ArithmeticException::class, {
+        assertFailsWith(ArithmeticException::class) {
             evaluator.execute(formula, exp, variableProvider())
-        })
+        }
     }
 
     @Test
     fun zeroDivByZeroTest() {
-        val evaluator = ExpExecutor(NullNotAllowedStrategy())
+        val evaluator = ExpExecutor(NullNotAllowedStrategy)
         val formula = "0.0/0.0"
         val exp = DivExp(
                 NumeralExp(0.0),

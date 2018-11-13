@@ -22,7 +22,7 @@ internal class RangeExpTests(
             override fun getVar(varName: String): Double? {
                 TODO("not implemented")
             }
-        }, NullNotAllowedStrategy())
+        }, NullNotAllowedStrategy)
 
         val accepted = range.accept(ctx)
         assertEquals(expectAccepted, accepted)
